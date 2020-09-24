@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) 2020.
+  ~
+  ~ This file is part of MediaLocker.
+  ~
+  ~ MediaLocker is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ MediaLocker is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path android:fillColor="#000" android:pathData="M 15,11 V 9 C 15,7.3435 13.6565,6 12,6 10.3435,6 9,7.3435 9,9 v 2 H 7.5 v 7 h 9 v -7 z m -5,0 V 9 c 0,-1.103 0.897,-2 2,-2 1.103,0 2,0.897 2,2 v 2 z"/>
+</vector>

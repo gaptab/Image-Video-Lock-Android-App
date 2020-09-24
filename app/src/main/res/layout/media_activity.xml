@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~
+  ~ This file is part of MediaLocker.
+  ~
+  ~ MediaLocker is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ MediaLocker is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/pnlStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:padding="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_media"
+            android:contentDescription="@string/dialog_share_folder"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:id="@+id/lblStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/added_and_selected"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/dialog_textColor"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grdImages"
+        android:layout_above="@+id/tblImages"
+        android:layout_below="@+id/pnlStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
+        android:layout_margin="4dp"/>
+
+    <ScrollView
+        android:id="@+id/tblImages"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/controls_background">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_margin="2dp"
+                    android:text="@string/title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:labelFor="@+id/txtImageName"/>
+                <EditText
+                    android:id="@+id/txtImageName"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:inputType="text"
+                    android:autofillHints="@string/title"
+                    android:layout_margin="2dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_margin="2dp"
+                    android:text="@string/category"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:labelFor="@+id/txtImageCategory"/>
+                <AutoCompleteTextView
+                    android:id="@+id/txtImageCategory"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:inputType="text"
+                    android:autofillHints="@string/category"
+                    android:layout_margin="2dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_margin="2dp"
+                    android:text="@string/tags"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:labelFor="@+id/txtImageTags"/>
+                <MultiAutoCompleteTextView
+                    android:id="@+id/txtImageTags"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:inputType="text"
+                    android:autofillHints="@string/tags"
+                    android:layout_margin="2dp"/>
+            </TableRow>
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/cmdImageSearch"
+                    android:src="@drawable/icon_image"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/image_search"/>
+                <ImageButton
+                    android:id="@+id/cmdVideoSearch"
+                    android:src="@drawable/icon_video"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/video_search"/>
+            </TableRow>
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/cmdImageSave"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/save"
+                    android:src="@drawable/icon_save"/>
+                <ImageButton
+                    android:id="@+id/cmdImageCancel"
+                    android:layout_height="@dimen/min_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/cancel"
+                    android:src="@drawable/icon_cancel"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/icon_add"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>

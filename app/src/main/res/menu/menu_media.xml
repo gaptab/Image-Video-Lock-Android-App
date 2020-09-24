@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~
+  ~ This file is part of MediaLocker.
+  ~
+  ~ MediaLocker is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ MediaLocker is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="de.domjos.mediaLocker.activities.MediaActivity">
+    <item
+        android:id="@+id/menImportImages"
+        android:orderInCategory="100"
+        android:title="@string/media_import_images"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menImportVideos"
+        android:orderInCategory="100"
+        android:title="@string/media_import_videos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionDeleteSelected"
+        android:icon="@drawable/icon_delete"
+        android:title="@string/delete_selected_items"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/actionChangeSelected"
+        android:icon="@drawable/icon_category"
+        android:title="@string/mass_change"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/icon_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/actionRefresh"
+        android:icon="@drawable/icon_refresh"
+        android:title="@string/refresh"
+        app:showAsAction="ifRoom"/>
+</menu>
